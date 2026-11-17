@@ -23,13 +23,7 @@ const places = [
 
   // ---------- Republic Polytechnic: South Food Court (add tomorrow) ----------
 
-  // ---------- Republic Polytechnic: nearby ----------
-  { id: 'p19', name: 'Ramen Shop', type: 'Noodles', location: 'Republic Polytechnic', area: 'Woodlands Checkpoint', image: require('./img/ramen.jpg') },
-  { id: 'p20', name: 'Yakiniku', type: 'Japanese BBQ', location: 'Republic Polytechnic', area: 'Woodlands Checkpoint', image: require('./img/yakiniku.jpg') },
 
-  // ---------- Causeway Point (example, change to your own places) ----------
-  { id: 'p21', name: 'Fishball Noodles', type: 'Noodles', location: 'Causeway Point', area: 'Food Court', image: require('./img/fishball.jpg') },
-  { id: 'p22', name: 'Economic Rice', type: 'Rice', location: 'Causeway Point', area: 'Food Court', image: require('./img/economicrice.jpg') },
 ];
 
 export default places;

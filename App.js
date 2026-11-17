@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { View, Text, SectionList, StyleSheet } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
-import places from './Data';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';import places from './Data';
 import Colors from './Colors';
 import PlaceRow from './components/PlaceRow';
 import GachaMachine from './components/GachaMachine';
@@ -10,7 +9,7 @@ import EditScreen from './components/EditScreen';
 
 export default function App() {
   const [placeList, setPlaceList] = useState(places);           
-  const [location, setLocation] = useState('Republic Polytechnic');
+  const location = 'Republic Polytechnic';
   const [editId, setEditId] = useState(null);                    
   const [pickId, setPickId] = useState(null);
   const [locked, setLocked] = useState(false);                    
@@ -31,11 +30,6 @@ export default function App() {
     const randomIndex = Math.floor(Math.random() * placesHere.length);
     setPickId(placesHere[randomIndex].id);
     setLocked(false);
-  }
-
-  function changeLocation(value) {
-    setLocation(value);
-    setPickId(null);
   }
 
   // Save the edited details
@@ -111,15 +105,8 @@ export default function App() {
       <Text style={styles.title}>Makan Where?</Text>
 
       <View style={styles.locationBox}>
-        <Picker
-          style={styles.pickerText}
-          dropdownIconColor={Colors.ink}
-          selectedValue={location}
-          onValueChange={(value) => changeLocation(value)}
-        >
-          <Picker.Item label="Republic Polytechnic" value="Republic Polytechnic" />
-          <Picker.Item label="Causeway Point" value="Causeway Point" />
-        </Picker>
+        <FontAwesome6 name="location-dot" size={16} color={Colors.machine} />
+        <Text style={styles.locationText}>Republic Polytechnic</Text>
       </View>
 
       <GachaMachine onTurn={turnGacha} />
@@ -162,16 +149,24 @@ const styles = StyleSheet.create({
     color: Colors.ink,
     paddingHorizontal: 20,
   },
-  locationBox: {
+    locationBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
     backgroundColor: Colors.card,
     borderWidth: 2,
     borderColor: Colors.ink,
-    borderRadius: 30,
+    borderRadius: 20,
+    paddingVertical: 6,
+    paddingHorizontal: 14,
     marginHorizontal: 20,
-    marginTop: 10,
+    marginTop: 8,
   },
-  pickerText: {
+  locationText: {
+    fontSize: 14,
+    fontWeight: 'bold',
     color: Colors.ink,
+    marginLeft: 8,
   },
   tagline: {
     textAlign: 'center',
