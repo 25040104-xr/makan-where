@@ -11,8 +11,10 @@ At RP, my friends and I always end up standing outside the food court asking eac
 - 🎨 The design is styled with StyleSheet and Flexbox. All the colours are in `Colors.js`, so the whole look can be changed from one file.
 
 -----------
+### App Demo
 
-Screenshots of the app:
+<img width="596" height="1350" alt="Makan where" src="https://github.com/user-attachments/assets/7b285df3-2a0e-4b75-b47d-42274b425d99" />
 
 
+-----------
 Video walkthrough of the app:
