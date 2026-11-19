@@ -21,9 +21,6 @@ const places = [
   { id: 'p17', name: 'Takoyaki', type: 'Snacks', location: 'Republic Polytechnic', area: 'North Food Court', image: require('./img/takoyaki.jpg') },
   { id: 'p18', name: 'Lemon Story Bubble Tea', type: 'Drinks', location: 'Republic Polytechnic', area: 'North Food Court', image: require('./img/lemonstory.jpg') },
 
-  // ---------- Republic Polytechnic: South Food Court (add tomorrow) ----------
-
-
 ];
 
 export default places;
